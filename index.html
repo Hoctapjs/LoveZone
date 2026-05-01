@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Love Days</title>
-  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="icon" type="image/png" href="icons/calendar.png">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Ms+Madi&display=swap');
 
@@ -160,6 +160,30 @@
       flex: 0 0 auto;
     }
 
+    .ui-icon {
+      width: 18px;
+      height: 18px;
+      flex: 0 0 auto;
+      object-fit: contain;
+      vertical-align: middle;
+    }
+
+    .title-icon {
+      width: 22px;
+      height: 22px;
+    }
+
+    .hero-icon {
+      width: 16px;
+      height: 16px;
+    }
+
+    .meaning-icon {
+      width: 22px;
+      height: 22px;
+      margin-bottom: 4px;
+    }
+
     h1,
     h2,
     h3,
@@ -206,6 +230,7 @@
       min-height: 32px;
       display: inline-flex;
       align-items: center;
+      gap: 8px;
       border: 1px solid var(--line);
       border-radius: 999px;
       background: rgba(240, 255, 223, 0.75);
@@ -296,6 +321,9 @@
     }
 
     .card-title h2 {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
       font-size: 18px;
     }
 
@@ -428,11 +456,18 @@
     .festival-kicker {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       gap: 10px;
       color: rgba(61, 21, 32, 0.76);
       font-size: 12px;
       font-weight: 950;
       text-transform: uppercase;
+    }
+
+    .festival-kicker span {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
     }
 
     body.dark .festival-kicker {
@@ -536,6 +571,9 @@
     }
 
     .festival-info b {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
       overflow-wrap: anywhere;
     }
 
@@ -709,10 +747,7 @@
   <main class="shell">
     <nav class="topbar" aria-label="Dieu huong Love Days">
       <button class="ghost-btn" id="themeToggle" type="button">
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M12 3v2m0 14v2M4.22 4.22l1.42 1.42m12.72 12.72 1.42 1.42M3 12h2m14 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-          <path d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" stroke="currentColor" stroke-width="2"></path>
-        </svg>
+        <img class="ui-icon" src="icons/view.png" alt="" aria-hidden="true">
         Chế độ tối
       </button>
     </nav>
@@ -720,24 +755,28 @@
     <section class="layout">
       <section class="panel hero">
         <div>
-          <div class="eyebrow">Mốc yêu bắt đầu: 22:00 - 25/04/2026</div>
+          <div class="eyebrow"><img class="ui-icon hero-icon" src="icons/calendar.png" alt="" aria-hidden="true">Mốc yêu bắt đầu: 22:00 - 25/04/2026</div>
           <h1>Lịch yêu và Thời gian bên nhau</h1>
           <p class="hero-copy">Một mốc thời gian quan trọng để cùng nhau trải nghiệm và yêu thương.</p>
         </div>
         <div class="meaning-row" aria-label="Y nghia tinh yeu">
           <div class="meaning-card" style="background:#A8DF8E">
+            <img class="ui-icon meaning-icon" src="icons/home.png" alt="" aria-hidden="true">
             <b>Bình yên</b>
             <span>Cùng nhau nhẹ lòng hơn.</span>
           </div>
           <div class="meaning-card" style="background:#F0FFDF">
+            <img class="ui-icon meaning-icon" src="icons/check.png" alt="" aria-hidden="true">
             <b>Chăm sóc</b>
             <span>Nhớ những điều nhỏ.</span>
           </div>
           <div class="meaning-card" style="background:#FFD8DF">
+            <img class="ui-icon meaning-icon" src="icons/compose.png" alt="" aria-hidden="true">
             <b>Dịu dàng</b>
             <span>Nói với nhau tử tế.</span>
           </div>
           <div class="meaning-card" style="background:#FFAAB8">
+            <img class="ui-icon meaning-icon" src="icons/link.png" alt="" aria-hidden="true">
             <b>Hẹn ước</b>
             <span>Có ngày để mong chờ.</span>
           </div>
@@ -747,7 +786,7 @@
       <aside class="side">
         <section class="card clock-card" aria-labelledby="clockTitle">
           <div class="card-title">
-            <h2 id="clockTitle">Love Clock</h2>
+            <h2 id="clockTitle"><img class="ui-icon title-icon" src="icons/calendar.png" alt="" aria-hidden="true">Love Clock</h2>
             <span class="status-pill" id="clockStatus">Đang chạy</span>
           </div>
           <div class="time-grid" aria-live="polite">
@@ -761,13 +800,13 @@
               Ngày bắt đầu
               <input id="startDate" type="datetime-local">
             </label>
-            <button class="small-btn" id="saveDateBtn" type="button">Lưu ngày</button>
+            <button class="small-btn" id="saveDateBtn" type="button"><img class="ui-icon" src="icons/save.png" alt="" aria-hidden="true">Lưu ngày</button>
           </div>
         </section>
 
         <section class="card random-card" aria-labelledby="randomTitle">
           <div class="card-title">
-            <h2 id="randomTitle">Random số tình yêu</h2>
+            <h2 id="randomTitle"><img class="ui-icon title-icon" src="icons/new.png" alt="" aria-hidden="true">Random số tình yêu</h2>
             <span class="status-pill" id="randomStatus">Sẵn sàng</span>
           </div>
           <div class="random-grid" aria-live="polite">
@@ -780,17 +819,17 @@
               <span>1 - 50</span>
             </div>
           </div>
-          <button class="primary-btn" id="randomLoveBtn" type="button">Random ngay</button>
+          <button class="primary-btn" id="randomLoveBtn" type="button"><img class="ui-icon" src="icons/new.png" alt="" aria-hidden="true">Random ngay</button>
         </section>
 
         <section class="card festival-card" aria-labelledby="festivalTitle">
           <div class="card-title">
-            <h2 id="festivalTitle">Ngày lễ gần nhất</h2>
+            <h2 id="festivalTitle"><img class="ui-icon title-icon" src="icons/calendar.png" alt="" aria-hidden="true">Ngày lễ gần nhất</h2>
             <span class="status-pill" id="festivalStatus">Sắp tới</span>
           </div>
           <div class="festival-spotlight">
             <div class="festival-kicker">
-              <span>Ưu tiên gần nhất</span>
+              <span><img class="ui-icon hero-icon" src="icons/calendar.png" alt="" aria-hidden="true">Ưu tiên gần nhất</span>
               <span id="nextFestivalType">Hẹn hò</span>
             </div>
             <div>
@@ -989,7 +1028,7 @@
           <article class="festival-item ${isPast ? "past" : ""} ${isNext ? "next" : ""}">
             <div class="date-tile">${pad(date.getDate())}<span>${pad(date.getMonth() + 1)}</span></div>
             <div class="festival-info">
-              <b>${item.name}</b>
+              <b><img class="ui-icon hero-icon" src="icons/calendar.png" alt="" aria-hidden="true">${item.name}</b>
               <span>${formatFestivalDate(item)}</span>
               <span>${item.note}</span>
             </div>
