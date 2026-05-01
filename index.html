@@ -6,6 +6,8 @@
   <title>Love Days</title>
   <link rel="icon" type="image/png" href="images/logo.png">
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Ms+Madi&display=swap');
+
     :root {
       color-scheme: light;
       --green: #A8DF8E;
@@ -19,7 +21,9 @@
       --panel-solid: #ffffff;
       --shadow: 0 22px 60px rgba(119, 77, 86, 0.14);
       --radius: 8px;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: "Google Sans", Arial, sans-serif;
+      font-optical-sizing: auto;
+      font-variation-settings: "GRAD" 0;
     }
 
     body.dark {
@@ -36,10 +40,25 @@
       box-sizing: border-box;
     }
 
+    *,
+    *::before,
+    *::after {
+      font-family: "Google Sans", Arial, sans-serif !important;
+      font-optical-sizing: auto;
+      font-variation-settings: "GRAD" 0;
+    }
+
+    .ms-madi-regular {
+      font-family: "Ms Madi", cursive !important;
+      font-weight: 400;
+      font-style: normal;
+    }
+
     body {
       margin: 0;
       min-height: 100vh;
       overflow-x: hidden;
+      font-family: "Google Sans", Arial, sans-serif !important;
       background:
         linear-gradient(155deg, rgba(168, 223, 142, 0.34), transparent 32%),
         linear-gradient(330deg, rgba(255, 170, 184, 0.42), transparent 34%),
@@ -56,8 +75,11 @@
     }
 
     button,
-    input {
-      font: inherit;
+    input,
+    select,
+    textarea,
+    ::placeholder {
+      font-family: "Google Sans", Arial, sans-serif !important;
     }
 
     button {
